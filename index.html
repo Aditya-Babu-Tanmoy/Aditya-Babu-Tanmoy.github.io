@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aditya Babu Tanmoy - Game Developer Portfolio</title>
     <style>
         /* Base Styles */
@@ -22,19 +22,14 @@
             --text-secondary: #cccccc;
         }
 
-        html, body {
-            width: 100%;
-            overflow-x: hidden;
-        }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Sans-serif, Ubuntu, Cantarell,
                 'Helvetica Neue', sans-serif;
             background: linear-gradient(135deg, var(--dark) 0%, #1a1a2e 50%, #16213e 100%);
             color: var(--text);
+            overflow-x: hidden;
             line-height: 1.6;
             min-height: 100vh;
-            position: relative;
         }
 
         /* Language Switcher */
@@ -89,10 +84,13 @@
         }
 
         @keyframes twinkle {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: scale(1);
                 opacity: var(--opacity, 0.8);
             }
+
             50% {
                 transform: scale(1.5);
                 opacity: 1;
@@ -112,9 +110,6 @@
         .main-content {
             position: relative;
             z-index: 10;
-            width: 100%;
-            max-width: 100%;
-            margin: 0 auto;
         }
 
         /* Hero Section */
@@ -125,14 +120,11 @@
             justify-content: center;
             position: relative;
             overflow: hidden;
-            width: 100%;
-            padding: 0 20px;
         }
 
         .hero-content {
             text-align: center;
             max-width: 800px;
-            width: 100%;
             padding: 0 20px;
             position: relative;
             z-index: 2;
@@ -200,9 +192,12 @@
         }
 
         @keyframes float {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0);
             }
+
             50% {
                 transform: translateY(-20px);
             }
@@ -213,6 +208,7 @@
                 transform: scale(0.9);
                 opacity: 0.6;
             }
+
             100% {
                 transform: scale(1.1);
                 opacity: 0.9;
@@ -263,6 +259,7 @@
             0% {
                 text-shadow: 0 0 5px rgba(0, 212, 255, 0.3);
             }
+
             100% {
                 text-shadow: 0 0 15px rgba(0, 212, 255, 0.7);
             }
@@ -331,7 +328,6 @@
             text-align: center;
             border-top: 1px solid rgba(0, 212, 255, 0.2);
             margin-top: 60px;
-            width: 100%;
         }
 
         .quote-text {
@@ -373,9 +369,6 @@
         .section {
             padding: 100px 20px;
             position: relative;
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
         }
 
         .section-title {
@@ -386,6 +379,8 @@
             font-weight: 600;
             position: relative;
             display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .section-title::after {
@@ -553,7 +548,6 @@
             position: relative;
             padding: 80px 0;
             background: linear-gradient(135deg, rgba(0, 212, 255, 0.03) 0%, rgba(0, 156, 204, 0.05) 100%);
-            width: 100%;
         }
 
         .timeline-container {
@@ -821,27 +815,13 @@
             }
 
             .cta-button {
-                width: 100%;
-                max-width: 250px;
-            }
-
-            .quote-text {
-                font-size: 1.2rem;
-                padding: 0 20px;
-            }
-
-            .section-title {
-                font-size: 2rem;
+                width: 80%;
             }
         }
 
         @media (max-width: 480px) {
             .hero-title {
                 font-size: 2rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.1rem;
             }
 
             .section {
@@ -853,7 +833,12 @@
             }
 
             .hero-cta {
+                flex-direction: column;
                 gap: 10px;
+            }
+
+            .cta-button {
+                width: 100%;
             }
 
             .certificate-item {
@@ -863,16 +848,6 @@
             .language-switcher {
                 top: 10px;
                 right: 10px;
-            }
-
-            .quote-text {
-                font-size: 1rem;
-                padding: 0 15px;
-            }
-
-            .quote-text::before,
-            .quote-text::after {
-                font-size: 2rem;
             }
         }
     </style>
